@@ -74,6 +74,5 @@
   <modules>
   	<module>BLL</module>
   	<module>Services</module>
-    <module>Utils</module>
   </modules>
 </project>

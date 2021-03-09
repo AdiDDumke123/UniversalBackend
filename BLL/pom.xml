@@ -17,6 +17,13 @@
     <packaging>jar</packaging>
   <artifactId>BLL</artifactId>
 
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
   <dependencies>
     <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
     <dependency>
@@ -47,6 +54,10 @@
           <artifactId>Utils</artifactId>
           <version>0.0.1-SNAPSHOT</version>
           <scope>compile</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.github.AdiDDumke123</groupId>
+          <artifactId>Mark1-Bll-Utils</artifactId>
       </dependency>
   </dependencies>
 </project>
