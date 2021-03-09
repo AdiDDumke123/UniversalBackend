@@ -5,6 +5,7 @@
 	<projects>
 		<project>BLL</project>
 		<project>Services</project>
+		<project>Utils</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

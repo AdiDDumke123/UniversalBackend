@@ -9,6 +9,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
 @RequestScoped
@@ -16,7 +17,7 @@ public class MailManager implements IMailManager {
 
     public boolean submit(final MailDTO mailDTO){
 
-        final String username = "mark1.dumke@gmail.com";
+        final String username = "adrian@dumke.local";
         final String password = "Rayquaza123";
 
         Properties prop = new Properties();
@@ -35,7 +36,7 @@ public class MailManager implements IMailManager {
         try {
 
             Message message = new MimeMessage(session);
-            message.setFrom(InternetAddress.parse("from@gmail.com",false)[0]);
+            message.setFrom(new InternetAddress("halloWelt@gmail.de","Adrian Dumke"));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("Adrian.Dumke@web.de")
             );
@@ -44,7 +45,7 @@ public class MailManager implements IMailManager {
             Transport.send(message);
             return true;
 
-        } catch (MessagingException e) {
+        } catch (MessagingException | UnsupportedEncodingException e) {
             return false;
         }
     }

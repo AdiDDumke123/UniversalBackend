@@ -6,7 +6,7 @@ public class MailDTO {
     private String email;
     private String subject;
     private String message;
-    private String copyWished;
+    private boolean copyWished;
 
     public String getName() {
         return name;
@@ -40,11 +40,11 @@ public class MailDTO {
         this.message = message;
     }
 
-    public String getCopyWished() {
+    public boolean getCopyWished() {
         return copyWished;
     }
 
-    public void setCopyWished(String copyWished) {
+    public void setCopyWished(boolean copyWished) {
         this.copyWished = copyWished;
     }
 }

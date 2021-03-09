@@ -27,9 +27,7 @@ public class UserService {
     {
         try {
             return  Response.ok(this.recaptchaManager.verify(recaptchaToken)).build();
-        } catch (IOException e){
-            Response.serverError().build();
-        } catch (InterruptedException e) {
+        } catch (IOException | InterruptedException e){
             Response.serverError().build();
         }
         return Response.serverError().build();
