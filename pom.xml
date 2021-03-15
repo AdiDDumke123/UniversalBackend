@@ -74,5 +74,6 @@
   <modules>
   	<module>BLL</module>
   	<module>Services</module>
+      <module>Persistence</module>
   </modules>
 </project>

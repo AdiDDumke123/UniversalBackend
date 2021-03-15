@@ -5,7 +5,7 @@
 	<projects>
 		<project>BLL</project>
 		<project>Services</project>
-		<project>Utils</project>
+		<project>Persistence</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

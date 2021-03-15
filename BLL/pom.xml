@@ -58,6 +58,21 @@
       <dependency>
           <groupId>com.github.AdiDDumke123</groupId>
           <artifactId>Mark1-Bll-Utils</artifactId>
+          <version>main-efdc4a0499-1</version>
       </dependency>
+      <dependency>
+          <groupId>com</groupId>
+          <artifactId>Persistence</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+          <scope>compile</scope>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+      <dependency>
+          <groupId>org.mockito</groupId>
+          <artifactId>mockito-core</artifactId>
+          <version>3.8.0</version>
+          <scope>test</scope>
+      </dependency>
+
   </dependencies>
 </project>
