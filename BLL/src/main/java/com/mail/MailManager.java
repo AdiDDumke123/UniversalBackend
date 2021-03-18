@@ -2,6 +2,7 @@ package com.mail;
 
 import com.mail.dto.MailDTO;
 import com.mail.interfaces.IMailManager;
+import com.security.PasswordUtils;
 
 import javax.enterprise.context.RequestScoped;
 import javax.mail.*;
@@ -19,7 +20,6 @@ public class MailManager implements IMailManager {
 
         final String username = "adrian@dumke.local";
         final String password = "Rayquaza123";
-
         Properties prop = new Properties();
         try(InputStream inputStream = this.getClass().getResourceAsStream("/mail.properties")) {
             prop.load(inputStream);

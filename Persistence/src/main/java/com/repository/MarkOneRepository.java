@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 
 @RequestScoped
 @Transactional
-public abstract class GenericRepository<T> {
+public abstract class MarkOneRepository<T> {
 
     @PersistenceContext(unitName = "mark1")
     private EntityManager entityManager;

@@ -2,6 +2,7 @@ package com.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Table(name = "OWNER")
@@ -16,6 +17,10 @@ public class Owner implements Serializable {
 
     @Column
     private String surname;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "owner_id")
+    private Set<Mail> mails;
 
     public Owner(String name, String surname){
         this.name = name;
@@ -44,5 +49,13 @@ public class Owner implements Serializable {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public Set<Mail> getMails() {
+        return mails;
+    }
+
+    public void setMails(Set<Mail> mails) {
+        this.mails = mails;
     }
 }
