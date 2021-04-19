@@ -17,6 +17,9 @@ public class Mail {
     private String password;
 
     @Column
+    private String salt;
+
+    @Column
     private long owner_id;
 
     public long getId() {
@@ -49,5 +52,14 @@ public class Mail {
 
     public void setOwner_id(long owner_id) {
         this.owner_id = owner_id;
+    }
+
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 }

@@ -8,7 +8,8 @@ import java.util.Set;
 @Table(name = "OWNER")
 public class Owner implements Serializable {
 
-    @Id
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
@@ -21,6 +22,10 @@ public class Owner implements Serializable {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "owner_id")
     private Set<Mail> mails;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "owner_id")
+    private Set<Web> webSet;
 
     public Owner(String name, String surname){
         this.name = name;
@@ -57,5 +62,13 @@ public class Owner implements Serializable {
 
     public void setMails(Set<Mail> mails) {
         this.mails = mails;
+    }
+
+    public Set<Web> getWebSet() {
+        return webSet;
+    }
+
+    public void setWebSet(Set<Web> webSet) {
+        this.webSet = webSet;
     }
 }
